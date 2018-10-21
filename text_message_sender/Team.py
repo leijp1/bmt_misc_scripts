@@ -1,4 +1,4 @@
-from .text-message-sender import send-message
+from send_message import send_message as send
 
 
 class Team:
@@ -41,4 +41,6 @@ class Team:
 
     def send_message(message):
         message.replace("{{team_name}}", self.team_name)
-        send_message
+        for phone_number in self.phone_numbers:
+            send(message, phone_number)
+
