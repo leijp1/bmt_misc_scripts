@@ -15,5 +15,3 @@ def send_message(message, phone_number_to):
                      messaging_service_sid='MGdf019ebed3e609d274cc66aaffb0d2e3',
                      to= phone_number_to
                  )
-
-

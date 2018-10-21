@@ -37,4 +37,6 @@ class Team:
 		return self.phone_numbers
 
 	def send_message(message):
-		message.replace("[team_name]", self.team_name)
+        message.replace("{team_id}", get_team_id())
+        message.replace("{team_name}", get_team_name())
+        message.replace("{coach_name}", get_coach_name())
