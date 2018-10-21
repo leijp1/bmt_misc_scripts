@@ -1,0 +1,30 @@
+%----------------SETUP----------------
+\documentclass[extrafontsizes,30pt]{memoir}
+\usepackage{geometry, array}
+\geometry{lmargin=0.5in, rmargin=0.5in}
+\pagestyle{empty}
+\thispagestyle{empty}
+\begin{document}
+%-------------DEFINITIONS-------------
+\newcommand{\TeamID}{ID}
+\newcommand{\TeamName}{Team Name}
+\newcommand{\SchoolName}{School Name}
+%---------------CONTENT---------------
+\begin{center}
+\mbox{}
+\vspace{1in}
+
+{\Huge \textbf{ \TeamID}}
+
+\vspace{1in}
+
+{\Large \textsc{\TeamName}}
+
+\vspace{1in}
+
+{\large \SchoolName}
+\end{center}
+%---------------ENDPAGE---------------
+\newpage
+%---------------CLEANUP---------------
+\end{document}
