@@ -45,7 +45,7 @@ class Team:
         for i in range(len(self.students_names)-1):
             students_format += self.students_names[i] + ", "
         students_format += self.students_names[-1]
-        patterns = {"{{team_?id}}" : self.team_id, "{{team_?name}}" : self.team_name, "{{coach_?n?a?m?e?}}" : self.coach_name, "{{all_students}}" : students_format}
+        patterns = {"{{team_?id}}": self.team_id, "{{team_?name}}": self.team_name, "{{coach_?n?a?m?e?}}": self.coach_name, "{{all_students}}": students_format}
         for item in patterns.items():
             message = re.sub(item[0], item[1], message)
         for phone_number in self.phone_numbers:
