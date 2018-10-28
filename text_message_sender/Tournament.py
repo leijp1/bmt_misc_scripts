@@ -7,10 +7,22 @@ class Tournament:
         self.teams = {}
         self.students = {}
         for row in info.index:
-            tm = Team(info.loc[row])
+            tm = extract_team_info(info, row)
             teams[tm.get_team_id] = tm
             for student in tm.get_students_names:
                 students[student.get_student_id] = student
+    def extract_team_info(pd, team):
+        students_names = [pd.loc[team, '\StudentA'], 
+                         pd.loc[team, '\StudentB'], 
+                         pd.loc[team, '\StudentC'], 
+                         pd.loc[team, '\StudentD'], 
+                         pd.loc[team, '\StudentE']]
+        team_info = {"team_id": pd.loc[team, '\TeamID'],
+                    "team_name": pd.loc[team, '\TeamName'], 
+                    "coach_name": pd.loc[team, '\CoachName'], 
+                    "students_names": students_names, 
+                    "phone_numbers": pd.loc[team, '\PhoneNumbers']}
+        return Team(team_info)
     def send_general_message(message):
         for team in self.team:
             team.send_message(message)
