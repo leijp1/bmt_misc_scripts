@@ -1,3 +1,9 @@
+'''
+creates a Student with student_id, name, team
+@param student_id: unique id for each student
+@param name: name of the student
+@param team: team the student is in
+'''
 class Student:
     def __init__(self, student_id, name, team):
         self.id = student_id
