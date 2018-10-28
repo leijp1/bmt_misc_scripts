@@ -7,7 +7,7 @@ class Tournament:
         self.teams = {}
         self.students = {}
         for row in info.index:
-            tm = Team(info.loc[row])
+            tm = Team(info.loc[row, 'team_id'], info.loc[row, 'team_name'], info.loc[row, 'coach_name'], info.loc[row, 'students_names'], info.loc[row, 'phone_numbers'])
             teams[tm.get_team_id] = tm
             for student in tm.get_students_names:
                 students[student.get_student_id] = student
