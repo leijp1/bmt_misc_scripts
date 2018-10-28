@@ -2,7 +2,7 @@ from send_message import send_message as send
 import re
 
 class Team:
-    def __init__(self, team_id, team_name, coach_name, students_names, phone_numbers):
+    def __init__(self, **kwargs):
         self.team_id = team_id
         self.team_name = team_name
         self.coach_name = coach_name
