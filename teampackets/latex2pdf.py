@@ -44,7 +44,7 @@ def readCommands(csvFile):
     the first row of the file as keys.
     """
     csvin = csv.reader(csvFile)
-    keys = csvin.next()
+    keys = next(csvin)
     return [OrderedDict((k, v) for k, v in zip(keys, line)) for line in csvin]
 
 def getSubstitution(value):
